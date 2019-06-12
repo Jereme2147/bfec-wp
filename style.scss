@@ -1,0 +1,202 @@
+/* 
+Theme Name: bfec
+Author: Jereme Daniels
+Author URI: http://jeremedaniels.com
+Description: Custom theme for Brushy Fork Environmental Consulting
+Version: 1.0
+*/
+
+//see Landing.scss for mobile nav css
+@import './css/reset.scss'; //imports screen reset and variables
+@import './css/hamburger.scss';
+@import './css/landing.scss';
+@import './css/about.scss';
+@import './css/portfolio.scss';
+
+.staff-single-container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    @include desktop() {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 80%;
+        margin: 20px 0;
+    }
+}
+.staff-single-title-image-bio {
+    @include desktop() {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        width: 45%;
+    }
+    
+}
+.staff-single-bio {
+    // width: 95%;
+    border-right: 3px solid $background;
+    margin-top: 10px;
+    p {
+        width: 95%;
+        color: $darkBlue;
+        font-family: $paragraph;
+        padding: 5px;
+        margin-right: 5px;
+    }
+    @include desktop() {
+        width: 100%;
+        padding: 20px;
+        // border-right: none;
+    }
+}
+.staff-single-image {
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: flex-end;
+    // justify-content: center;
+    text-align: center;
+    border-left: 3px solid $background;
+    // border-left: 20px solid $background;
+    img {
+        width: 75%;
+    }
+    @include desktop() {
+        cursor: pointer;
+        img {
+            width: 60%;
+            box-shadow: 20px 20px 10px darken($foreground, 30%);
+            transition: 0.5s;
+        }
+        justify-content: center;
+        border-left: none;
+    }
+}
+.staff-single-name-title {
+    color: $darkBlue;
+    // width: 95%;
+    // border-right: 20px solid $background;
+    padding: 20px;
+    margin: 10px 0;
+    border-right: 3px solid $background;
+    h3 {
+        text-align: center;
+        font-family: $header;
+        font-size: 25px;
+    }
+    h4 {
+        text-align: center;
+        font-family: $header;
+        margin: 0;
+    }
+    h3, h4 {
+        text-align: left;
+    }
+    @include desktop() {
+        border-right: none;
+        display: flex;
+        flex-direction: column;
+        // flex-direction: row;
+        // justify-content: space-around;
+        // align-items: flex-end;
+        align-items: center;
+        width: 100%;
+        border-right: 3px solid $background;
+        
+        
+        h3 {
+            font-size: 35px;
+            width: 100%;
+            text-align: center;
+        }
+        h4 {
+            font-size: 25px;
+            width: 100%;
+            text-align: right;
+
+        }
+    }
+}
+.staff-single-qualifications, .staff-single-expertise{
+    color: $darkBlue;
+    margin: 10px 0;
+    ul {
+        font-family: $paragraph;
+    }
+    h3 {
+        font-family: $header;
+        padding-left: 10px;
+    }
+    @include desktop() {
+        ul {
+            width: 80%;
+        }
+        p {
+            font-size: 25px;
+        }
+    }
+}
+.staff-single-qual-expert {
+    @include desktop() {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 45%;
+    }
+}
+.staff-single-qualifications {
+    border-left: 3px solid $background;
+    @include desktop() {
+        border-left: none;
+    }
+}
+.staff-single-expertise {
+    border-right: 3px solid $background;
+    @include desktop() {
+        border-right: none;
+    }
+}
+
+// *************************common classes**************************************
+//card borders
+.card-left {
+    border-left: 3px solid $background;
+}
+.card-right {
+    border-right: 3px solid $background;
+
+}
+// Classes for loading larger images on desktop and smaller on mobile.
+.mobile-img {
+    @include desktop() {
+        display: none;
+    }
+    @include small-desktop() {
+        display: none;
+    }
+    @include tablet() {
+        display: none;
+    }
+}
+#mobile-hamburger {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+.no-banner-spacer {
+    //for when there's no banner to position items
+    // width: 100%;
+    height: 75px;
+}
+//see Landing.scss for mobile nav css
+
+.banner-div {
+    width: 100%;
+    img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,179 @@
+@import './reset.scss';
+#portfolio-menu {
+    width: 100%;
+}
+#portfolio-page-mobile-menu-open {
+    opacity: 0;
+    pointer-events: none;
+    // background: url("./img/nav-background900.png");
+    background: $background;
+    position: fixed;
+    // top: 20%;
+    left: 0;
+    width: 100vw;
+    // height: 40%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    z-index: 99;
+    ul {
+        list-style: none;
+        padding: 0;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: space-around;
+
+    }
+    ul a, li {
+        text-decoration: none;
+        font-family: $title;
+        font-weight: bolder;
+        color: $foreground;
+        font-size: 20px;
+    }
+    ul:last-child {
+        text-align: center;
+    }
+}
+#portfolio-all-categories{
+    text-align: center;
+}
+.portfolio-desktop-nav {
+    display: none;
+    @include desktop(){
+        // width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 15px 5px;
+        // border: 2px solid $background;
+        align-items: center;
+        font-family: $paragraph;
+        color: $darkBlue;
+        div {
+            width: 85%;
+            ul {
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+                flex-wrap: wrap;
+                justify-content: center;
+                a {
+                    padding: 10px;
+                    text-decoration: none;
+                    color: $darkBlue;
+                    text-transform: uppercase;
+                    text-shadow: 1px 1px 1px $background;
+                    // flex-grow: 1;
+                    width: 30%;
+                    margin-bottom: 2px;
+                    transition: 0.4s;
+                    &:hover {
+                        // border-bottom: 2px solid $darkBlue;
+                        // margin-bottom: 0;
+                        text-shadow: none;
+                        color: $background;
+                    }
+                }
+            }
+        }
+    }
+}
+.portfolio-page-mobile-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: $darkBlue;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    h3 {
+        font-family: $header;
+        font-size: 25px;
+    }
+    i {
+        font-size: 35px;
+    }
+    @include desktop() {
+        display: none;
+    }
+}
+#portfolio-thumb {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    @include desktop() {
+        width: 85%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+}
+.portfolio-thumb-container {
+    // margin: 15px 5px;
+    font-family: $paragraph;
+    color: $darkBlue;
+    display: flex;
+    width: 100%;
+    opacity: .99;
+    justify-content: center;
+    img {
+        position: relative;
+        // z-index: 2;
+        width: 100%;
+    }
+    span {
+            z-index: 2;
+            opacity: 1;
+            position: absolute;
+            // margin-top: 75px;
+            // margin-left: 30px;
+            color: $foreground;
+            text-shadow: 1px 1px 1px $darkBlue;
+            transition: .5s;
+
+        }
+    @include desktop() {
+        display: flex;
+        width: 30%;
+        // height: 150px;
+        background-size: cover;
+        height: 185px;
+        overflow: hidden;
+        background: black;
+        img {
+            width: 100%;
+            // height: auto;
+            position: relative;
+            z-index: 2;
+            transition: .5s;
+            // background: black;
+        }
+        span {
+            z-index: 3;
+            opacity: 0;
+            position: absolute;
+            margin-top: 75px;
+            // margin-left: 30px;
+            color: $foreground;
+            text-shadow: 1px 1px 1px $darkBlue;
+            transition: .5s;
+
+        }
+    }
+}
+.portfolio-thumb-container:hover > span {
+    @include desktop() {
+        opacity: 1;
+    }
+}
+.portfolio-thumb-container:hover > a img {
+    @include desktop(){
+        opacity: .5;
+    }
+}

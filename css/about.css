@@ -1,0 +1,201 @@
+body,
+html {
+  background: #F0F3F8;
+  height: 100%;
+  margin: 0;
+}
+
+body h1,
+body h3,
+html h1,
+html h3 {
+  margin: 0;
+}
+
+#about-div {
+  margin: 15px 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Raleway", sans-serif;
+  color: #1A4173;
+}
+
+#about-div h2 {
+  text-align: center;
+  text-shadow: 1px 1px 2px #5A86BF;
+}
+
+#about-div p {
+  text-align: left;
+  padding: 0 5px 0 10px;
+}
+
+@media (min-width: 950px) {
+  #about-div div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  #about-div h2 {
+    font-size: 50px;
+  }
+  #about-div p {
+    width: 75%;
+    max-width: 1200px;
+    min-width: 900px;
+    font-size: 25px;
+  }
+}
+
+#mission-statement {
+  Position: absolute;
+  top: 75px;
+  width: 100%;
+  color: #F0F3F8;
+  text-shadow: 1px 1px 2px #5A86BF;
+}
+
+#mission-statement h3 {
+  font-family: "Roboto", sans-serif;
+  padding: 30px 30px 10px 30px;
+}
+
+#mission-statement p {
+  font-family: "Raleway", sans-serif;
+  padding: 0 30px;
+}
+
+@media (min-width: 950px) {
+  #mission-statement {
+    top: 200px;
+    width: 80%;
+  }
+  #mission-statement h3 {
+    font-size: 50px;
+  }
+  #mission-statement P {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 949px) {
+  #mission-statement {
+    width: 80%;
+    top: 75px;
+  }
+  #mission-statement h3 {
+    font-size: 30px;
+  }
+  #mission-statement P {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 350px) {
+  #mission-statement {
+    top: 50px;
+  }
+  #mission-statement h3 {
+    padding: 30px 30px 5px 30px;
+  }
+}
+
+@media (min-width: 950px) and (max-width: 1060px) {
+  #mission-statement {
+    width: 80%;
+    top: 200px;
+  }
+  #mission-statement h3 {
+    font-size: 40px;
+  }
+  #mission-statement P {
+    font-size: 35px;
+  }
+}
+
+.about-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 15px 5px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.about-section h2 {
+  color: #1A4173;
+  font-family: "Lato", sans-serif;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center;
+  text-shadow: 1px 1px 2px #5A86BF;
+}
+
+.about-section div {
+  width: 40%;
+  margin-bottom: 10px;
+}
+
+.about-section div a {
+  text-decoration: none;
+}
+
+@media (min-width: 950px) {
+  .about-section div {
+    width: 30%;
+  }
+}
+
+.about-section img {
+  width: 100%;
+}
+
+.about-section h4 {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  color: #1A4173;
+}
+
+.about-section p {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: #1A4173;
+}
+
+.about-section h4, .about-section p {
+  margin: 5px;
+}
+
+@media (min-width: 950px) {
+  .about-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 75%;
+    max-width: 1200px;
+    min-width: 900px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-section h2 {
+    font-size: 50px;
+  }
+  .about-section h4 {
+    font-size: 25px;
+  }
+}
+/*# sourceMappingURL=about.css.map */

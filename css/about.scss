@@ -1,0 +1,156 @@
+@import './reset.scss';
+
+#about-div {
+    // color: $darkBlue;
+    // font-family: $paragraph;
+    // width: 75%;
+    margin: 15px 5px;
+    
+    align-items: center;
+    font-family: $paragraph;
+    color: $darkBlue;
+    // padding: 5px 5px;
+    h2 {
+        text-align: center;
+        text-shadow: 1px 1px 2px $background;
+    }
+    p {
+        text-align: left;
+        padding: 0 5px 0 10px;
+        // border-left: 3px solid $background;
+
+    }
+    @include desktop() {
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        h2 {
+            font-size: 50px;
+        }
+        p {
+            width: 75%;
+            max-width: 1200px;
+            min-width: 900px; 
+            font-size: 25px;
+        }
+    }
+}
+#mission-statement {
+    Position: absolute;
+    top: 75px;
+    width: 100%;
+    color: $foreground;
+    text-shadow: 1px 1px 2px $background;
+    h3 {
+        font-family: $title;
+        padding: 30px 30px 10px 30px;
+    }
+    p {
+        font-family: $paragraph;
+        padding: 0 30px;
+    }
+    @include desktop() {
+        top: 200px;
+        width: 80%;
+        h3{
+            font-size: 50px;
+        }
+        P {
+            font-size: 40px;
+        }
+    }
+    @include tablet() {
+        // width: 100%;
+        width: 80%;
+        top: 75px;
+         h3{
+            font-size: 30px;
+        }
+        P {
+            font-size: 25px;
+        }
+    }
+    @include tiny-phone() {
+        top: 50px;
+        h3{
+            padding: 30px 30px 5px 30px;
+        }
+        
+    }
+    @include small-desktop() {
+        width: 80%;
+        top: 200px;
+          h3{
+            font-size: 40px;
+        }
+        P {
+            font-size: 35px;
+        }
+    }
+}
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px 5px;
+    justify-content: space-around;
+    h2 {
+        color: $darkBlue;
+        font-family: $lato;
+        flex-basis: 100%;
+        text-align: center;
+        text-shadow: 1px 1px 2px $background;
+    }
+    div {
+        width: 40%;
+        margin-bottom: 10px;
+        a {
+            text-decoration: none;
+        }
+        @include desktop() {
+            width: 30%;
+        }
+    }
+        img {
+        width: 100%;
+    }
+    h4 {
+        text-align: center;
+        font-family: $header;
+        color: $darkBlue;
+
+    }
+    p {
+        text-align: center;
+        font-family: $paragraph;
+        color: $darkBlue;
+    }
+    h4, p {
+        margin: 5px;
+    }
+    @include desktop() {
+        // margin: 30px 30px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: 75%;
+        max-width: 1200px;
+        min-width: 900px;
+        align-items: center;
+        h2 {
+            font-size: 50px;
+        }
+        h4 {
+            font-size: 25px;
+        }
+    }
+}
+
+// #staff-div {
+//     border-right: 3px solid $background;
+// }
+// #opportunities-div {
+//     border-left: 3px solid $background;
+// }

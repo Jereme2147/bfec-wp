@@ -1,0 +1,14 @@
+body,
+html {
+  background: #F0F3F8;
+  height: 100%;
+  margin: 0;
+}
+
+body h1,
+body h3,
+html h1,
+html h3 {
+  margin: 0;
+}
+/*# sourceMappingURL=reset.css.map */

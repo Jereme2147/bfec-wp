@@ -1,0 +1,49 @@
+$background: #5A86BF;
+$foreground: #F0F3F8;
+$darkBlue: #1A4173;
+$green: #498BA6;
+$tan: #CBCCC7;
+// fonts 
+$title: 'Roboto', sans-serif;
+$header: 'Oswald', sans-serif;
+$paragraph: 'Raleway', sans-serif;
+$lato: 'Lato', sans-serif;
+// Media Queries
+@mixin tablet {
+    @media (min-width: 600px) and (max-width: 949px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: 950px) {
+        // @media (min-width: 1061px) {
+        @content;
+    }
+}
+@mixin small-desktop {
+    @media (min-width: 950px) and (max-width: 1060px) {
+        @content;
+    }
+}
+@mixin large-desktop {
+    @media (min-width: 1300px) {
+        @content;
+    }
+}
+@mixin tiny-phone {
+    @media (max-width: 350px) {
+        @content;
+    }
+}
+// Screen Reset
+body,
+html {
+    background: $foreground;
+    height: 100%;
+    margin: 0;
+
+    h1,
+    h3 {
+        margin: 0;
+    }
+}
