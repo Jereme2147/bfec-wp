@@ -28,7 +28,7 @@ function bfec_custom_post_type() {
         'labels' => array(
             'name' => 'Employees', 
             'singular_name' => 'staff',
-            'add_new_item' => 'Add staff',
+            'add_new_item' => 'Add Name',
             'edit_item' => 'Edit employee'
         ),
         'menu-icon' => 'dashicons-clipboard',
@@ -38,6 +38,24 @@ function bfec_custom_post_type() {
             'title', 'thumbnail', 'editor', 'excerpt', 'comments', 'custom-fields'
         ),
         'taxonomies' => array('Job Title')
+        ));
+
+        register_post_type('opportunity', 
+        array(
+        'rewrite' => array('slug' => 'opportunities'),
+        'labels' => array(
+            'name' => 'Opportunities', 
+            'singular_name' => 'opportunity',
+            'add_new_item' => 'Add opportunity',
+            'edit_item' => 'Edit opportunity'
+        ),
+        'menu-icon' => 'dashicons-clipboard',
+        'public' => true,
+        'has_archive' => true,
+        'supports' => array(
+            'title', 'thumbnail', 'editor', 'excerpt', 'comments', 'custom-fields'
+        ),
+        'taxonomies' => array('Job Opening')
         ));
         
         register_post_type('landing-item', 
@@ -56,7 +74,25 @@ function bfec_custom_post_type() {
             'title', 'thumbnail', 'editor', 'excerpt', 'comments', 'custom-fields'
         )
         ));
-        // register_taxonomy_for_object_type('category','staff');
+
+        register_post_type('portfolio', 
+        array(
+        'rewrite' => array('slug' => 'portfolio-items'),
+        'labels' => array(
+            'name' => 'Portfolio-items', 
+            'singular_name' => 'Portfolio',
+            'add_new_item' => 'Add Portfolio Item',
+            'edit_item' => 'Edit Portfolio Item'
+        ),
+        'menu-icon' => 'dashicons-clipboard',
+        'public' => true,
+        'has_archive' => true,
+        'supports' => array(
+            'title', 'thumbnail', 'editor', 'excerpt', 'comments', 'custom-fields'
+        ),
+        'taxonomies' => array('category', 'sub-category')
+        ));
+        
 }
 add_action('init', 'bfec_custom_post_type');
 //front page items

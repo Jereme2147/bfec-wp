@@ -11,7 +11,7 @@
     <nav>
         <div class="mobile-nav" id="mobile-nav"> 
             <div id="mobile-nav-title">
-               <a href="./"><h1>Brushy Fork Environmental Consulting, Inc.</h1></a>
+               <a href="<?php echo get_site_url();?>"><h1>Brushy Fork Environmental Consulting, Inc.</h1></a>
             </div>
             <div class="icon">
                 <div class="hamburger">
@@ -20,7 +20,7 @@
             <div class="mobile-menu-open" id="mobile-menu-open">
                     <ul>
                         <a href="./"><li>Home</li></a>
-                        <a href="./about.php"><li>About</li></a>
+                        <a href="<?php echo get_template_directory_uri();?>/about"><li>About</li></a>
                         <a href="./portfolio.php"><li>Portfolio</li></a>
                         <a href="#"><li>News</li></a>
                         <a href="#"><li>Contact</li></a>
@@ -30,11 +30,11 @@
         <div id="desktop-nav">
             <div id="desktop-title-menu">
                 <div id="desktop-title">
-                   <a href="./"><h1>Brushy Fork Environmental Consulting, Inc.</h1></a>
+                   <a href="<?php echo get_site_url();?>"><h1>Brushy Fork Environmental Consulting, Inc.</h1></a>
                 </div>
                 <div id="desktop-menu">
                     <ul>
-                        <a href="./about.php">
+                        <a href="<?php echo get_template_directory_uri();?>/about">
                             <li>About</li>
                         </a>
                         <a href="./portfolio.php">

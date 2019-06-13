@@ -173,12 +173,11 @@ nav {
     }
 }
 // ************* END MOBILE Navigation **************
-#desktop-landing-slideshow {
+#desktop-landing-slideshow { //not using with WP
     display: none;
     @include desktop() {
         width: 100%;
         display: block;
-        // overflow: hidden;
         img {
             width: 100%;
         }
@@ -198,7 +197,7 @@ nav {
         }
     }
 }
-#mobile-landing-slideshow {
+#mobile-landing-slideshow { //not using with WP
     width: 100%;
     overflow: hidden;
     display: flex;

@@ -18,19 +18,12 @@
                         the_excerpt();
                         $custom_field_keys = get_post_custom_keys();
                         foreach ( $custom_field_keys as $key => $value ) {
-                            // $valuet = trim($value);
                             $valuet = $value;
                             if ( '_' == $valuet{0} )
                             continue;
-                            // echo $value . "<br />";
                             $my_value = get_post_custom_values($valuet);
                             echo $value . ' ' . $my_value{0} . "<br />";
-                            // echo $value . "<br />";
                             }
-                            // $mykey_values = get_post_custom_values( 'my_key' );
-                            // foreach ( $mykey_values as $key => $value ) {
-                            //     echo "$key  => $value ( 'my_key' )<br />"; 
-                            //     }
                         ?>
                     </div>
                 </div>

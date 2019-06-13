@@ -1,20 +1,12 @@
 <?php 
     get_header();
 ?>
-<!-- just for testing, to be removed -->
-<!-- <div style="height: 80px;">Front damn page</div> -->
-<div id="mobile-landing-slideshow">
-    <?php
-        if ( function_exists( 'soliloquy' ) ) { soliloquy( 'front-page', 'slug' ); };
-    ?>
-</div>
-        <!-- only shows desktop -->
-<div id="desktop-landing-slideshow">
-    <!-- <img src="./img/desktop-landing1900.png" alt=""> -->
+<div>
     <?php
     if ( function_exists( 'soliloquy' ) ) { soliloquy( 'front-page', 'slug' ); };
     ?>
 </div>
+
 <?php
  $the_query = new WP_Query( array('posts_per_page'=>6,
                                  'post_type'=>'landing-item',
