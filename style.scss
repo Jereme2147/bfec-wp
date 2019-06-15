@@ -115,6 +115,7 @@ Version: 1.0
             font-size: 25px;
             width: 100%;
             text-align: right;
+            margin-right: 30%;
 
         }
     }
@@ -139,23 +140,34 @@ Version: 1.0
     }
 }
 .staff-single-qual-expert {
+    color: $darkBlue;
+    margin: 10px 0;
+    ul {
+        font-family: $paragraph;
+        border-right: 3px solid $background;
+        @include desktop() {
+            border-right: none;
+        }
+    }
+    h3 {
+        font-family: $header;
+        padding-left: 10px;
+        border-left: 3px solid $background;
+        @include desktop() {
+            border-left: none;
+        }
+    }
     @include desktop() {
         display: flex;
         flex-direction: column;
         justify-content: center;
         width: 45%;
-    }
-}
-.staff-single-qualifications {
-    border-left: 3px solid $background;
-    @include desktop() {
-        border-left: none;
-    }
-}
-.staff-single-expertise {
-    border-right: 3px solid $background;
-    @include desktop() {
-        border-right: none;
+        ul {
+            width: 80%;
+        }
+        p {
+            font-size: 25px;
+        }
     }
 }
 
@@ -190,7 +202,9 @@ Version: 1.0
 .no-banner-spacer {
     //for when there's no banner to position items
     // width: 100%;
-    height: 75px;
+    @include desktop() {
+        height: 75px;
+    }
 }
 //see Landing.scss for mobile nav css
 

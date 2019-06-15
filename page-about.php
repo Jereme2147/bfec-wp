@@ -42,10 +42,21 @@
     while ($the_query -> have_posts()) : $the_query -> the_post(); 
     ?>
         <div class="about-employee">
-        <a href="#">
+        <a href="<?php the_permalink()?>" target="_BLANK">
             <img src="<?php echo the_post_thumbnail_url(); ?>" alt="">
             <h4><?php echo the_title();?></h4>
-            <p><?php echo 'put in excerpt'; ?></p>
+            <p><?php 
+                    $custom_field_keys = get_post_custom_keys();
+                        foreach ( $custom_field_keys as $key => $value ) {
+                            $valuet = $value;
+                            if ( '_' == $valuet{0} )
+                                continue;
+                            if ($value == 'Job Title'){
+                                $my_value = get_post_custom_values($valuet);
+                                echo $my_value{0};
+                                };
+                            }
+                ?> </p>
         </a>
     </div>
     <?php

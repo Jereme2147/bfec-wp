@@ -20,7 +20,7 @@
             <div class="mobile-menu-open" id="mobile-menu-open">
                     <ul>
                         <a href="./"><li>Home</li></a>
-                        <a href="<?php echo get_template_directory_uri();?>/about"><li>About</li></a>
+                        <a href="<?php echo site_url()?>/about"><li>About</li></a>
                         <a href="./portfolio.php"><li>Portfolio</li></a>
                         <a href="#"><li>News</li></a>
                         <a href="#"><li>Contact</li></a>
@@ -34,7 +34,7 @@
                 </div>
                 <div id="desktop-menu">
                     <ul>
-                        <a href="<?php echo get_template_directory_uri();?>/about">
+                        <a href="<?php echo site_url()?>/about">
                             <li>About</li>
                         </a>
                         <a href="./portfolio.php">
