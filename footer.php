@@ -7,7 +7,7 @@
             <div id="footer-links-copyright" class="footer-style">
                 <div id="footer-links">
                     <ul>
-                        <a href="#">
+                        <a href="<?php echo site_url()?>/about">
                             <li>About Us</li>
                         </a>
                         <a href="#">
@@ -16,7 +16,7 @@
                         <a href="#">
                             <li>News</li>
                         </a>
-                        <a href="#">
+                        <a href="<?php echo site_url()?>/contact">
                             <li>Contact Us</li>
                         </a>
                         <a href="#">

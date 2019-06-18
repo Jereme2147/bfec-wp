@@ -1,0 +1,158 @@
+@import './reset.scss';
+.staff-single-container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    @include desktop() {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 80%;
+        margin: 20px 0;
+    }
+}
+.staff-single-title-image-bio {
+    @include desktop() {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        width: 45%;
+    }
+    
+}
+.staff-single-bio {
+    // width: 95%;
+    border-right: 3px solid $background;
+    margin-top: 10px;
+    p {
+        width: 95%;
+        color: $darkBlue;
+        font-family: $paragraph;
+        padding: 5px;
+        margin-right: 5px;
+    }
+    @include desktop() {
+        width: 100%;
+        padding: 20px;
+        // border-right: none;
+    }
+}
+.staff-single-image {
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: flex-end;
+    // justify-content: center;
+    text-align: center;
+    border-left: 3px solid $background;
+    // border-left: 20px solid $background;
+    img {
+        width: 75%;
+    }
+    @include desktop() {
+        cursor: pointer;
+        img {
+            width: 60%;
+            box-shadow: 20px 20px 10px darken($foreground, 30%);
+            transition: 0.5s;
+        }
+        justify-content: center;
+        border-left: none;
+    }
+}
+.staff-single-name-title {
+    color: $darkBlue;
+    // width: 95%;
+    // border-right: 20px solid $background;
+    padding: 20px;
+    margin: 10px 0;
+    border-right: 3px solid $background;
+    h3 {
+        text-align: center;
+        font-family: $header;
+        font-size: 25px;
+    }
+    h4 {
+        text-align: center;
+        font-family: $header;
+        margin: 0;
+    }
+    h3, h4 {
+        text-align: left;
+    }
+    @include desktop() {
+        border-right: none;
+        display: flex;
+        flex-direction: column;
+        // flex-direction: row;
+        // justify-content: space-around;
+        // align-items: flex-end;
+        align-items: center;
+        width: 100%;
+        border-right: 3px solid $background;
+        
+        
+        h3 {
+            font-size: 35px;
+            width: 100%;
+            text-align: center;
+        }
+        h4 {
+            font-size: 25px;
+            width: 100%;
+            text-align: right;
+            margin-right: 30%;
+
+        }
+    }
+}
+.staff-single-qualifications, .staff-single-expertise{
+    color: $darkBlue;
+    margin: 10px 0;
+    ul {
+        font-family: $paragraph;
+    }
+    h3 {
+        font-family: $header;
+        padding-left: 10px;
+    }
+    @include desktop() {
+        ul {
+            width: 80%;
+        }
+        p {
+            font-size: 25px;
+        }
+    }
+}
+.staff-single-qual-expert {
+    color: $darkBlue;
+    margin: 10px 0;
+    ul {
+        font-family: $paragraph;
+        border-right: 3px solid $background;
+        @include desktop() {
+            border-right: none;
+        }
+    }
+    h3 {
+        font-family: $header;
+        padding-left: 10px;
+        border-left: 3px solid $background;
+        @include desktop() {
+            border-left: none;
+        }
+    }
+    @include desktop() {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 45%;
+        ul {
+            width: 80%;
+        }
+        p {
+            font-size: 25px;
+        }
+    }
+}

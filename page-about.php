@@ -61,7 +61,32 @@
     </div>
     <?php
     endwhile;
+    wp_reset_postdata();
     ?>
+</section>
+
+<section class="about-section card-left" id="opportunities-div">
+<!-- all should by dynamicly loaded. -->
+    <h2>Opportunities</h2>
+    <?php
+        $the_query = new WP_Query( array('posts_per_page'=>10,
+                                 'post_type'=>'opportunity',
+                                 'paged' => get_query_var('paged') ? get_query_var('paged') : 1) 
+                                ); 
+        while ($the_query -> have_posts()) : $the_query -> the_post(); 
+    ?>
+    <div class="opportunities-div">
+        <a href="<?php the_permalink()?>" target="_BLANK">
+            <img src="<?php echo the_post_thumbnail_url(); ?>" alt="">
+            <h4><?php echo the_title();?></h4>
+            <p><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
+        </a>
+    </div>
+    <?php
+        endwhile;
+        wp_reset_postdata();
+    ?>
+    </div>
 </section>
 <?php
     

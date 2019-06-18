@@ -19,11 +19,11 @@
             </div>
             <div class="mobile-menu-open" id="mobile-menu-open">
                     <ul>
-                        <a href="./"><li>Home</li></a>
+                        <a href="<?php echo site_url()?>"><li>Home</li></a>
                         <a href="<?php echo site_url()?>/about"><li>About</li></a>
                         <a href="./portfolio.php"><li>Portfolio</li></a>
                         <a href="#"><li>News</li></a>
-                        <a href="#"><li>Contact</li></a>
+                        <a href="<?php echo site_url()?>/contact"><li>Contact</li></a>
                     </ul>
             </div>
         </div>
@@ -34,16 +34,20 @@
                 </div>
                 <div id="desktop-menu">
                     <ul>
-                        <a href="<?php echo site_url()?>/about">
+                        <a <?php if(is_page('about')) echo 'class="nav-selected"'?>
+                            href="<?php echo site_url()?>/about">
                             <li>About</li>
                         </a>
-                        <a href="./portfolio.php">
+                        <a <?php if(is_page('portfolio')) echo 'class="nav-selected"'?>
+                            href="./portfolio.php">
                             <li>Portfolio</li>
                         </a>
-                        <a href="#">
+                        <a <?php if(is_page('news')) echo 'class="nav-selected"'?>
+                            href="#">
                             <li>News</li>
                         </a>
-                        <a href="#">
+                        <a <?php if(is_page('contact')) echo 'class="nav-selected"'?>
+                            href="<?php echo site_url()?>/contact">
                             <li>Contact</li>
                         </a>
                     </ul>
