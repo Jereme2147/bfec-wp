@@ -96,11 +96,6 @@ function bfec_custom_post_type() {
 }
 add_action('init', 'bfec_custom_post_type');
 //front page items
-
-// function reg_cat() {
-//          register_taxonomy_for_object_type('category','staff');
-// };
-// add_action('init', 'reg_cat');
 // following code adds more images to employee and portfolio custom post types.
 function mySearchFilter($articleQuery) {
     if( isset($_GET['search-type']) && $_GET['search-type']){

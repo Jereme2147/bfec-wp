@@ -7,15 +7,13 @@ contact page
         the_post();
         ?>
             <section class="contact-section-form">
-        <?php
-        ?> 
-        <div>
+            <div>
             <?php the_content();?>
-        </div>
-        <?php 
+            </div>
+            <?php 
      }
 ?>
-        </section>
+            </section>
 <?php 
     get_footer();
 ?>
