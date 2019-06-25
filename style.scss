@@ -255,3 +255,35 @@ Version: 1.0
     // color: white;
     border-bottom: 2px solid $foreground;
 }
+
+// single post page style
+.single-section {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    color: $darkBlue;
+    font-family: $paragraph;
+    h2 {
+        width: 100%;
+        text-align: center;
+    }
+    @include desktop() {
+        width: 85%;
+        // border-left: 2px solid $background;
+        // display: flex;
+        // flex-direction: row;
+        // flex-wrap: wrap;
+        // div {
+        //     width: 45%;
+        // }
+    }
+   
+
+}
+.bfec-elementor-font {
+    p, ul {
+        color: $darkBlue;
+        font-family: $paragraph;
+    }
+
+}
