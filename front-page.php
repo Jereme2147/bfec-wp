@@ -10,6 +10,9 @@
 <?php
  $the_query = new WP_Query( array('posts_per_page'=>6,
                                  'post_type'=>'landing-item',
+                                 'meta_key' => 'position',
+                                 'orderby' => 'meta_value_num',
+                                 'order' => 'ASC',
                                  'paged' => get_query_var('paged') ? get_query_var('paged') : 1) 
                             ); 
     $postCount = 0; //variable to push sections left or right

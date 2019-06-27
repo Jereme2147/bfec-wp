@@ -34,17 +34,20 @@
 <section class="about-section card-right" id="staff-div">
     <h2>The BFEC Team</h2>
     <?php
- $the_query = new WP_Query( array('posts_per_page'=>10,
+ $posts = get_posts( array('posts_per_page'=> -1,
                                  'post_type'=>'staff',
-                                 'paged' => get_query_var('paged') ? get_query_var('paged') : 1) 
-                            ); 
+                                 'meta_key' => 'position',
+                                 'orderby' => 'meta_value_num',
+                                 'order' => 'ASC'
+                            )); 
     $postCount = 0; //variable to push sections left or right
-    while ($the_query -> have_posts()) : $the_query -> the_post(); 
+    foreach ($posts as $post) :
+    setup_postdata($post)
     ?>
         <div class="about-employee">
         <a href="<?php the_permalink()?>" target="_BLANK">
             <img src="<?php echo the_post_thumbnail_url(); ?>" alt="">
-            <h4><?php echo the_title();?></h4>
+            <h4><?php echo the_title(); echo the_post('orderby');?></h4>
             <p><?php 
                     $custom_field_keys = get_post_custom_keys();
                         foreach ( $custom_field_keys as $key => $value ) {
@@ -56,11 +59,12 @@
                                 echo $my_value{0};
                                 };
                             }
+                             echo get_post_custom_values('position');
                 ?> </p>
         </a>
     </div>
     <?php
-    endwhile;
+    endforeach;
     wp_reset_postdata();
     ?>
 </section>

@@ -263,6 +263,7 @@ Version: 1.0
     flex-direction: column;
     color: $darkBlue;
     font-family: $paragraph;
+    margin: 20px 0;
     h2 {
         width: 100%;
         text-align: center;
@@ -281,9 +282,11 @@ Version: 1.0
 
 }
 .bfec-elementor-font {
-    p, ul {
+    p, ul, h3, h2 {
         color: $darkBlue;
         font-family: $paragraph;
     }
-
+    p {
+        font-size: 20px;
+    }
 }

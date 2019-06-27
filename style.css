@@ -1923,6 +1923,7 @@ html h3 {
           flex-direction: column;
   color: #1A4173;
   font-family: "Raleway", sans-serif;
+  margin: 20px 0;
 }
 
 .single-section h2 {
@@ -1936,8 +1937,12 @@ html h3 {
   }
 }
 
-.bfec-elementor-font p, .bfec-elementor-font ul {
+.bfec-elementor-font p, .bfec-elementor-font ul, .bfec-elementor-font h3, .bfec-elementor-font h2 {
   color: #1A4173;
   font-family: "Raleway", sans-serif;
+}
+
+.bfec-elementor-font p {
+  font-size: 20px;
 }
 /*# sourceMappingURL=style.css.map */
