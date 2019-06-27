@@ -21,7 +21,7 @@
                     <ul>
                         <a href="<?php echo site_url()?>"><li>Home</li></a>
                         <a href="<?php echo site_url()?>/about"><li>About</li></a>
-                        <a href="./portfolio.php"><li>Portfolio</li></a>
+                        <a href="<?php echo site_url()?>/portfolio"><li>Portfolio</li></a>
                         <a href="#"><li>News</li></a>
                         <a href="<?php echo site_url()?>/contact"><li>Contact</li></a>
                     </ul>
@@ -39,7 +39,7 @@
                             <li>About</li>
                         </a>
                         <a <?php if(is_page('portfolio')) echo 'class="nav-selected"'?>
-                            href="./portfolio.php">
+                            href="<?php echo site_url()?>/portfolio">
                             <li>Portfolio</li>
                         </a>
                         <a <?php if(is_page('news')) echo 'class="nav-selected"'?>

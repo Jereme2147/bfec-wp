@@ -10,7 +10,7 @@
                         <a href="<?php echo site_url()?>/about">
                             <li>About Us</li>
                         </a>
-                        <a href="#">
+                        <a href="<?php echo site_url()?>/portfolio">
                             <l i>Portfolio</li>
                         </a>
                         <a href="#">
