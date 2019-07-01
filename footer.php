@@ -13,7 +13,7 @@
                         <a href="<?php echo site_url()?>/portfolio">
                             <l i>Portfolio</li>
                         </a>
-                        <a href="#">
+                        <a href="<?php echo site_url()?>/news">
                             <li>News</li>
                         </a>
                         <a href="<?php echo site_url()?>/contact">

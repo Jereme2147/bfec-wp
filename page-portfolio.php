@@ -6,6 +6,7 @@
     <img src="<?php echo get_template_directory_uri();?>/img/j-hook-1900.jpg" class="desktop-img"alt="">
     <img src="<?php echo get_template_directory_uri();?>/img/j-hook-600.jpg"class="mobile-img" alt="">
 </div>
+page-portfolio.php
 <?php
     //include the menu
     include get_theme_file_path( '/portfolio-menu.php' );
@@ -24,7 +25,6 @@
         <span><?php foreach((get_the_category()) as $category) {
                         $postcat= $category->cat_ID;
                         $catname =$category->cat_name;
-                        // echo $postcat;
                         echo $catname;
     } ?></span>
         <a href="<?php echo the_permalink();?>" target="_BLANK"> <img 
@@ -38,5 +38,5 @@
 
 
 <?php
-    get_header();
+    get_footer();
 ?>

@@ -22,7 +22,7 @@
                         <a href="<?php echo site_url()?>"><li>Home</li></a>
                         <a href="<?php echo site_url()?>/about"><li>About</li></a>
                         <a href="<?php echo site_url()?>/portfolio"><li>Portfolio</li></a>
-                        <a href="#"><li>News</li></a>
+                        <a href="<?php echo site_url()?>/news"><li>News</li></a>
                         <a href="<?php echo site_url()?>/contact"><li>Contact</li></a>
                     </ul>
             </div>
@@ -43,7 +43,7 @@
                             <li>Portfolio</li>
                         </a>
                         <a <?php if(is_page('news')) echo 'class="nav-selected"'?>
-                            href="#">
+                            href="<?php echo site_url()?>/news">
                             <li>News</li>
                         </a>
                         <a <?php if(is_page('contact')) echo 'class="nav-selected"'?>
@@ -54,7 +54,7 @@
                 </div>
             </div>
             <div id="deskt"op-logo">
-                <img src= "<?php echo get_template_directory_uri();?>/img/logo.png" alt="">
+                <img src= "<?php echo get_template_directory_uri();?>/img/logo.png" alt="bfec logo">
             </div>
         </div>
     </nav>
